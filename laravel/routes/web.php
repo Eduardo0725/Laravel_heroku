@@ -24,3 +24,6 @@ Route::get('/userlist', function () { $umUsuarioQualquer = new User; $umUsuarioQ
 
     $umUsuarioQualquer->password = '123'; $umUsuarioQualquer->save(); return User::all();
 });
+
+Route::get('/form', 'TarefaDeBackupController@create')->name('form.create');
+Route::post('/form', 'TarefaDeBackupController@store')->name('form.store');
